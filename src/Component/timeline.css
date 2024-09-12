@@ -1,0 +1,121 @@
+/* General Styling */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 50px;
+}
+
+/* Timeline Container */
+.timeline-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  background-color: rgb(151, 207, 207);
+}
+
+.content{
+  display: flex;
+  padding-right: 19rem;
+  
+}
+
+.content img{
+  width: 10em;
+  padding-left: 23em;
+  
+}
+
+.content h2 {
+  font-size: 24px;
+  color: #c21818;
+  padding-right: em;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 16px;
+  color: #040000;
+  max-width: 300px;
+  margin: 0 auto;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+/* Horizontal Timeline */
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: sticky;
+  max-width: 10000px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #847d7d;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-marker.active {
+  border: 4px solid rgb(10, 10, 216);
+  background-color: rgb(255, 255, 255);
+}
+
+/* Line between dots */
+.timeline-line {
+  position: absolute;
+  top: 31%;
+  left: 70%;
+  width: 8.7rem;
+  height: 4px;
+  background-color: #827f7f;
+  transform: translateY(-80%);
+  
+}
+
+.timeline-line.active {
+  background-color: rgb(10, 10, 216);
+  animation: fillLine 0.87s linear forwards;
+}
+
+/* Date Styling */
+.timeline-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-item p.active {
+  color: #01080c;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .content p {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+.demo-image {
+    width: 75em;
+}
+.hero{
+    /* padding-bottom: 10em; */
+    background-color: rgb(151, 207, 207);
+    position: sticky;
+}
